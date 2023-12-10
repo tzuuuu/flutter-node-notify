@@ -1,0 +1,10 @@
+^D:\GITHUB-REPO\NOTIFICATION_SYSTEM\FLUTTER_FRONTEND\BUILD\WINDOWS\X64\CMAKEFILES\7258BE27B49A8518D18CCF4C5BFBCB6E\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,28 @@
+^D:\GITHUB-REPO\NOTIFICATION_SYSTEM\FLUTTER_FRONTEND\BUILD\WINDOWS\X64\CMAKEFILES\456FE67F0E973F1E16841AFFD41AFFBD\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\User\flutter PROJECT_DIR=D:\github-repo\notification_system\flutter_frontend FLUTTER_ROOT=C:\Users\User\flutter FLUTTER_EPHEMERAL_DIR=D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral PROJECT_DIR=D:\github-repo\notification_system\flutter_frontend FLUTTER_TARGET=D:\github-repo\notification_system\flutter_frontend\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC9jZjdhOWQwODAwZjJhNWRhMTY2ZGJlMGViOWZiMjQ3NjAxODI2OWIxLw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=D:\github-repo\notification_system\flutter_frontend\.dart_tool\package_config.json C:/Users/User/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\GITHUB-REPO\NOTIFICATION_SYSTEM\FLUTTER_FRONTEND\BUILD\WINDOWS\X64\CMAKEFILES\042CBCEF7F9BE3E08E97915DEF70B965\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\GITHUB-REPO\NOTIFICATION_SYSTEM\FLUTTER_FRONTEND\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/github-repo/notification_system/flutter_frontend/windows -BD:/github-repo/notification_system/flutter_frontend/build/windows/x64 --check-stamp-file D:/github-repo/notification_system/flutter_frontend/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

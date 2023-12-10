@@ -1,0 +1,10 @@
+^D:\GITHUB-REPO\NOTIFICATION_SYSTEM\FLUTTER_FRONTEND\BUILD\WINDOWS\X64\CMAKEFILES\7258BE27B49A8518D18CCF4C5BFBCB6E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/github-repo/notification_system/flutter_frontend/windows -BD:/github-repo/notification_system/flutter_frontend/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/github-repo/notification_system/flutter_frontend/build/windows/x64/notification_system.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
