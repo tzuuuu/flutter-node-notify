@@ -1,10 +1,12 @@
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/icudtl.dat
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/flutter_windows.dll
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

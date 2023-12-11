@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../api/getpost.dart'; 
+import '../getpost.dart'; 
 
 class NotificationPage extends StatefulWidget {
   @override
@@ -59,7 +59,7 @@ class _NotificationPageState extends State<NotificationPage> {
           const SizedBox(height: 10),
           // listview
           Container(
-            height: MediaQuery.of(context).size.height - 300,
+            height: MediaQuery.of(context).size.height - 400,
             child: ListView.builder(
               physics: AlwaysScrollableScrollPhysics(),
               shrinkWrap: true, // 讓 ListView 根據內容大小動態收縮

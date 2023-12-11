@@ -22,7 +22,7 @@ class BottomNav extends StatelessWidget {
           );
         } else  {
           // ProfileScreen()
-          Navigator.pushReplacement(
+          Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const ProfileScreen()),
           );
