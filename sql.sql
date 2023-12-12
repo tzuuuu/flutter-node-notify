@@ -33,7 +33,7 @@ INSERT INTO Categories (Name) VALUES
 -- 插入十筆會員資料
 INSERT INTO Members (Account, Username, Password)
 VALUES
-('usee1', 'User One', 'password1'),
+('user1', 'User One', 'password1'),
 ('user2', 'User Two', 'password2'),
 ('user3', 'User Three', 'password3'),
 ('user4', 'User Four', 'password4'),

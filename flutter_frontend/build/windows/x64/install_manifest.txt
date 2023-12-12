@@ -1,5 +1,6 @@
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/icudtl.dat
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/flutter_windows.dll
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/url_launcher_windows_plugin.dll
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json

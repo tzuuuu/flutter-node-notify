@@ -1,5 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import '../layout/index.dart';
+import '../getpost.dart';
 import '../register.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -15,7 +17,7 @@ class LoginScreen extends StatelessWidget {
     final String password = passwordController.text;
     String apiUrl = '';
 
-    if (kIsWeb) {
+    if (kIsWeb || Platform.isWindows) {
       apiUrl = 'http://127.0.0.1:3000'; // Web
     } else {
       apiUrl = 'http://10.0.2.2:3000'; // Android 
@@ -29,6 +31,7 @@ class LoginScreen extends StatelessWidget {
     );
 
     if (response.statusCode == 200) {
+      PostFetcher.clearContentLog();
       print('login');
       String account = ''; // 假設從 response 中獲取使用者帳號
       String name = ''; // 假設從 response 中獲取使用者名稱

@@ -8,3 +8,6 @@ D:/github-repo/notification_system/flutter_frontend/build/windows/x64/flutter/CM
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/CMakeFiles/notification_system.dir
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/CMakeFiles/INSTALL.dir
 D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/CMakeFiles/ALL_BUILD.dir
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/url_launcher_windows/CMakeFiles/url_launcher_windows_plugin.dir
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/url_launcher_windows/CMakeFiles/INSTALL.dir
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/url_launcher_windows/CMakeFiles/ALL_BUILD.dir

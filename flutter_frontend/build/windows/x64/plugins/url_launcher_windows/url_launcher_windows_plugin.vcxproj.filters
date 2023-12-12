@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral\.plugin_symlinks\url_launcher_windows\windows\url_launcher_windows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral\.plugin_symlinks\url_launcher_windows\windows\messages.g.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral\.plugin_symlinks\url_launcher_windows\windows\system_apis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral\.plugin_symlinks\url_launcher_windows\windows\url_launcher_plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral\.plugin_symlinks\url_launcher_windows\windows\include\url_launcher_windows\url_launcher_windows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral\.plugin_symlinks\url_launcher_windows\windows\messages.g.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral\.plugin_symlinks\url_launcher_windows\windows\system_apis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral\.plugin_symlinks\url_launcher_windows\windows\url_launcher_plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral\.plugin_symlinks\url_launcher_windows\windows\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{FA37F069-DA46-3FB6-8DEB-1A0C7B0802ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{59334176-BCCD-3B79-BAAA-6B7E04D0EC19}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

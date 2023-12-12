@@ -152,7 +152,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\runner\ALL_BUILD.vcxproj">
+    <ProjectReference Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\plugins\url_launcher_windows\ALL_BUILD.vcxproj">
       <Project>{60A79013-163C-33D1-8A37-8F43F9DCCB3D}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

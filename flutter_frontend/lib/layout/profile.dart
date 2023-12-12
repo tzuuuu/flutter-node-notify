@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:notification_system/login.dart';
+import '../getpost.dart';
 import '../layout/bottomNav.dart';
 import '../logout.dart'; 
 
@@ -31,6 +32,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Future<void> logout() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.clear(); // 清除使用者資料
+    PostFetcher.clearContentLog();
 
     // 導航到 logout.dart
     Navigator.pushReplacement(

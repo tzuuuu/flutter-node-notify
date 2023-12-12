@@ -152,6 +152,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{CC74D20B-F594-33FC-8D16-E2FA34DDD4AF}</Project>
       <Name>notification_system</Name>
     </ProjectReference>
+    <ProjectReference Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\plugins\url_launcher_windows\url_launcher_windows_plugin.vcxproj">
+      <Project>{CDFE0314-8F0F-3EA2-908B-5F72992086AC}</Project>
+      <Name>url_launcher_windows_plugin</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

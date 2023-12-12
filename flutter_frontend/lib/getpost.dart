@@ -3,7 +3,8 @@ import 'package:http/http.dart' as http;
 
 class PostFetcher {
   static const String baseUrl = 'https://itouch.cycu.edu.tw/home/mvc'; 
-  static List<Map<String, dynamic>> datalog = []; // 新增 datalog 
+  static List<Map<String, dynamic>> datalog = [];    // 公告類別 
+  static List<Map<String, dynamic>> contentlog = []; // 公告清單
 
   // 建立 datalog
   static void createDatalog(Map<String, dynamic> responseData) {
@@ -39,12 +40,39 @@ class PostFetcher {
         }
         return titles;
       } else {
-        throw Exception('無法取得標題。錯誤: ${response.reasonPhrase}');
+        print('無法取得標題。錯誤: ${response.reasonPhrase}');
+        List<String> defaultTitles = List.generate(6, (index) => '標題${index + 1}');
+        return defaultTitles;
       }
     } catch (error) {
-      throw Exception('載入標題時發生錯誤: $error');
+      print('載入標題時發生錯誤: $error');
+      List<String> defaultTitlesOnError  = List.generate(6, (index) => '標題${index + 1}');
+      return defaultTitlesOnError ;      
     }
   }
+
+  static void createContentlog(Map<String, dynamic> responseData) {
+  final contentList = responseData['content'] as List;
+
+    for (var item in contentList) {
+      contentlog.add({
+        'title': item['TITLE'],
+        'SN': item['SN'], // 存取 'SN' 資料
+      });
+      
+    }
+  }
+
+  // 給 notification.dart 呼叫公告清單
+  static List<Map<String, dynamic>> getContentLog() {
+    return contentlog;
+  }
+
+  // 登入/出時清空公告
+  static void clearContentLog() {
+    contentlog.clear();
+  }
+
 
   Future<List<String>> fetchContent(int inputId) async {
     try {
@@ -57,16 +85,22 @@ class PostFetcher {
       if (response.statusCode == 200) {
         final responseData = json.decode(response.body);
 
+        createContentlog(responseData);
+
         List<String> content = [];
         for (var item in responseData['content']) {
           content.add(item['TITLE'].toString());
         }
         return content;
       } else {
-        throw Exception('無法取得內容。錯誤: ${response.reasonPhrase}');
+        print('無法取得內容。錯誤: ${response.reasonPhrase}');
+        List<String> defaultContent = List.generate(5, (index) => 'list${index + 1}');
+        return defaultContent;        
       }
     } catch (error) {
-      throw Exception('載入內容時發生錯誤: $error');
+      print('載入內容時發生錯誤: $error');
+      List<String> defaultContentOnError = List.generate(5, (index) => 'list${index + 1}');
+      return defaultContentOnError;
     }
   }
 }

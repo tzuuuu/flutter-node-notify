@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../getpost.dart'; 
 
 class NotificationPage extends StatefulWidget {
@@ -7,7 +8,8 @@ class NotificationPage extends StatefulWidget {
 }
 
 class _NotificationPageState extends State<NotificationPage> {
-  List<String> titles = []; // 從 API 獲取的標題列表
+  List<String> titles = [];                                             // 從 API 獲取的標題列表
+  List<Map<String, dynamic>> contentlog = PostFetcher.getContentLog();  // 從 getpost 獲取的公告標題
 
   @override
   void initState() {
@@ -25,10 +27,39 @@ class _NotificationPageState extends State<NotificationPage> {
       });
       print('Titles: $titles');
     } catch (e) {
+
       print('載入標題時發生錯誤: $e');
+      List<String> defaultTitles = ["標題1", "標題2", "標題3", "標題4", "標題5", "標題6"];
+      setState(() {
+        titles = defaultTitles;
+      });
     }
   }
   List<String> linkList = List.generate(10, (index) => 'Link $index');
+
+  void _launchURL(String sn) async {
+    if (sn != "" && sn.isNotEmpty) {
+      // 構建外部網站的 URL 格式
+      String url = 'https://ann.cycu.edu.tw/aa/frontend/AnnItem.jsp?sn=$sn';
+
+      if (await canLaunch(url)) {
+        await launch(url); // 打開連結
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('無效的連結，請先選擇公告類別'),
+          ),
+        );
+      }
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('無效的連結，請先選擇公告類別'),
+        ),
+      );
+    }
+  }
+
 
 
   @override
@@ -68,7 +99,15 @@ class _NotificationPageState extends State<NotificationPage> {
                 return ListTile(
                   title: Text(linkList[index]),
                   onTap: () {
-                    // on click event
+                     if (contentlog.isNotEmpty) {
+                        _launchURL(contentlog[index]['SN']);
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text('無效的連結，請先選擇公告類別'),
+                          ),
+                        );
+                      }
                   },
                 );
               },
