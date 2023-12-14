@@ -66,4 +66,4 @@ END //
 
 DELIMITER ;
 
-CALL GetUserSubscribedCategories(2);
+-- CALL GetUserSubscribedCategories(2);

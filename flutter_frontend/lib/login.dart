@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import '../layout/index.dart';
@@ -25,32 +26,42 @@ class LoginScreen extends StatelessWidget {
 
 
     final response = await http.post(
-      Uri.parse('${apiUrl}/login'), // 更改為你的 Node.js 伺服器位址
+      Uri.parse('${apiUrl}/login'), // Node.js 伺服器位址
       headers: {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36'},
       body: {'account': account, 'password': password},
     );
-
     if (response.statusCode == 200) {
       PostFetcher.clearContentLog();
       print('login');
-      String account = ''; // 假設從 response 中獲取使用者帳號
-      String name = ''; // 假設從 response 中獲取使用者名稱
 
-      // 儲存帳號和名稱至 SharedPreferences
-      _saveUserDetails(account, name);     
-       Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => IndexScreen()),
-      );
+      Map<String, dynamic> responseData = jsonDecode(response.body);
+      String account = responseData['account'] ?? ''; // 使用適當的預設值，如果 'account' 鍵不存在或為 null
+      String name = responseData['name'] ?? ''; // 使用適當的預設值，如果 'name' 鍵不存在或為 null
+
+      // 確保解析到有效的帳號和名稱後再儲存至 SharedPreferences
+      if (account.isNotEmpty && name.isNotEmpty) {
+        _saveUserDetails(account, name);
+
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => IndexScreen()),
+        );
+      } else {
+        // 處理無效的帳號和名稱
+        print('Invalid account or name received from server');
+      }
     } else {
       print(response.statusCode);
     }
+
+
   }
 
   _saveUserDetails(String account, String name) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('userAccount', account);
     await prefs.setString('userName', name);
+    print('User details saved to SharedPreferences: $account, $name');
   }
 
 
@@ -80,7 +91,7 @@ class LoginScreen extends StatelessWidget {
             onPressed: () => login(context),
             child: const Text('登入'),
           ),
-          const SizedBox(height: 10.0), // 添加間距
+          const SizedBox(height: 10.0), // 間距
           ElevatedButton(
             onPressed: () {
               Navigator.push(

@@ -39,21 +39,21 @@ class _NotificationPageState extends State<NotificationPage> {
 
   void _launchURL(String sn) async {
     if (sn != "" && sn.isNotEmpty) {
-      // 構建外部網站的 URL 格式
+      // 外部網站的 URL
       String url = 'https://ann.cycu.edu.tw/aa/frontend/AnnItem.jsp?sn=$sn';
 
       if (await canLaunch(url)) {
         await launch(url); // 打開連結
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
+          const SnackBar(
             content: Text('無效的連結，請先選擇公告類別'),
           ),
         );
       }
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
+        const SnackBar(
           content: Text('無效的連結，請先選擇公告類別'),
         ),
       );
@@ -92,7 +92,7 @@ class _NotificationPageState extends State<NotificationPage> {
           Container(
             height: MediaQuery.of(context).size.height - 400,
             child: ListView.builder(
-              physics: AlwaysScrollableScrollPhysics(),
+              physics: const AlwaysScrollableScrollPhysics(),
               shrinkWrap: true, // 讓 ListView 根據內容大小動態收縮
               itemCount: linkList.length,
               itemBuilder: (context, index) {
@@ -103,7 +103,7 @@ class _NotificationPageState extends State<NotificationPage> {
                         _launchURL(contentlog[index]['SN']);
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
+                          const SnackBar(
                             content: Text('無效的連結，請先選擇公告類別'),
                           ),
                         );
