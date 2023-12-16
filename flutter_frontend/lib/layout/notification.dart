@@ -10,11 +10,12 @@ class NotificationPage extends StatefulWidget {
 class _NotificationPageState extends State<NotificationPage> {
   List<String> titles = [];                                             // 從 API 獲取的標題列表
   List<Map<String, dynamic>> contentlog = PostFetcher.getContentLog();  // 從 getpost 獲取的公告標題
+  List<String> linkList = List.generate(10, (index) => 'Link $index');
 
   @override
   void initState() {
     super.initState();
-    _loadTitles();
+    _loadTitles();    
   }
 
   void _loadTitles() async {
@@ -26,6 +27,7 @@ class _NotificationPageState extends State<NotificationPage> {
         titles = postTitles; // 更新標題列表
       });
       print('Titles: $titles');
+      handleButtonPress(0);
     } catch (e) {
 
       print('載入標題時發生錯誤: $e');
@@ -35,8 +37,8 @@ class _NotificationPageState extends State<NotificationPage> {
       });
     }
   }
-  List<String> linkList = List.generate(10, (index) => 'Link $index');
-
+  
+  
   void _launchURL(String sn) async {
     if (sn != "" && sn.isNotEmpty) {
       // 公告的 URL
@@ -127,7 +129,6 @@ class _NotificationPageState extends State<NotificationPage> {
       
       setState(() {
         linkList = fetchedTitles;
-        _loadTitles();
       });
       print('Titles: $linkList');
       } catch (error) {

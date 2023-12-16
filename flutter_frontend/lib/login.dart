@@ -34,6 +34,7 @@ class LoginScreen extends StatelessWidget {
       PostFetcher.clearContentLog();
 
       Map<String, dynamic> responseData = jsonDecode(response.body);
+      print('responseData = ${responseData}'); // check
       String account = responseData['account'] ?? ''; // 如果 'account' 不存在 -> null
       String name = responseData['name'] ?? ''; // 如果 'name' 不存在 -> null
 
