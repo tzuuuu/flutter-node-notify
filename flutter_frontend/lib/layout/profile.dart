@@ -40,26 +40,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return isLoggedIn
-        ? Scaffold(
-            appBar: AppBar(
-              title: const Text(
-                '個人檔案',
-                textAlign: TextAlign.center,
-              ),
+      ? Scaffold(
+          appBar: AppBar(
+            title: const Text(
+              '個人檔案',
+              textAlign: TextAlign.center,
             ),
-            body: ProfileContent(
-              username: username,
+          ),
+          body: ProfileContent(
+            username: username,
+          ),
+          bottomNavigationBar: const BottomNav(),
+        )
+      : Scaffold(
+          appBar: AppBar(
+            title: const Text(
+              '登入',
+              textAlign: TextAlign.center,
             ),
-            bottomNavigationBar: const BottomNav(),
-          )
-        : Scaffold(
-            appBar: AppBar(
-              title: const Text(
-                '登入',
-                textAlign: TextAlign.center,
-              ),
-            ),
-            body: LoginScreen(),
-          );
+          ),
+          body: LoginScreen(),
+        );
   }
 }

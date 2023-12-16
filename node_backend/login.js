@@ -9,8 +9,8 @@ const userLogin = (req, res) => {
       if (results.length === 0) {
         return res.status(401).json({ message: '帳號或密碼錯誤' });
       } else {
-        const user = results[0]; // 第一個結果
-        const { Account, Username } = user; // 從結果中提取 Account 和 UserName
+        const user = results[0]; 
+        const { Account, Username } = user;
         console.log('user = ', user);
         return res.status(200).json({ message: '登入成功', account: Account, name: Username });
       }      

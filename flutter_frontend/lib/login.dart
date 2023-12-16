@@ -32,11 +32,10 @@ class LoginScreen extends StatelessWidget {
     );
     if (response.statusCode == 200) {
       PostFetcher.clearContentLog();
-      print('login');
 
       Map<String, dynamic> responseData = jsonDecode(response.body);
-      String account = responseData['account'] ?? ''; // 使用適當的預設值，如果 'account' 鍵不存在或為 null
-      String name = responseData['name'] ?? ''; // 使用適當的預設值，如果 'name' 鍵不存在或為 null
+      String account = responseData['account'] ?? ''; // 如果 'account' 不存在 -> null
+      String name = responseData['name'] ?? ''; // 如果 'name' 不存在 -> null
 
       // 確保解析到有效的帳號和名稱後再儲存至 SharedPreferences
       if (account.isNotEmpty && name.isNotEmpty) {
@@ -53,8 +52,6 @@ class LoginScreen extends StatelessWidget {
     } else {
       print(response.statusCode);
     }
-
-
   }
 
   _saveUserDetails(String account, String name) async {
@@ -65,7 +62,7 @@ class LoginScreen extends StatelessWidget {
   }
 
 
- @override
+  @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16.0),

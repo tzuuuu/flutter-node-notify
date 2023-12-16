@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notification_system/getpost.dart';
 import '../layout/index.dart';
 import '../layout/profile.dart';
 
@@ -14,14 +15,13 @@ class BottomNav extends StatelessWidget {
       ],
       currentIndex: 0,
       onTap: (index) {
+        PostFetcher.clearContentLog();
         if (index == 0) {
-          // IndexScreen()
            Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => const IndexScreen()),
           );
         } else  {
-          // ProfileScreen()
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const ProfileScreen()),

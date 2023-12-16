@@ -39,7 +39,7 @@ class _NotificationPageState extends State<NotificationPage> {
 
   void _launchURL(String sn) async {
     if (sn != "" && sn.isNotEmpty) {
-      // 外部網站的 URL
+      // 公告的 URL
       String url = 'https://ann.cycu.edu.tw/aa/frontend/AnnItem.jsp?sn=$sn';
 
       if (await canLaunch(url)) {
@@ -90,7 +90,7 @@ class _NotificationPageState extends State<NotificationPage> {
           const SizedBox(height: 10),
           // listview
           Container(
-            height: MediaQuery.of(context).size.height - 400,
+            height: MediaQuery.of(context).size.height - 300,
             child: ListView.builder(
               physics: const AlwaysScrollableScrollPhysics(),
               shrinkWrap: true, // 讓 ListView 根據內容大小動態收縮

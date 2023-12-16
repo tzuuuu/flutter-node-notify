@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notification_system/getpost.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../layout/index.dart'; 
 
@@ -11,8 +12,8 @@ class LogoutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 清除使用者資料
     clearUserData(context);
+    PostFetcher.clearContentLog();
 
     return Scaffold(
       appBar: AppBar(
@@ -27,7 +28,7 @@ class LogoutScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const IndexScreen()), // 導航回 index.dart
+                  MaterialPageRoute(builder: (context) => const IndexScreen()),
                 );
               },
               child: const Text('返回首頁'),

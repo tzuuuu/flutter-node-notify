@@ -26,28 +26,20 @@ CREATE TABLE SubscriptionCategories (
     FOREIGN KEY (CategoryID) REFERENCES Categories(ID)
 );
 
--- 插入公告類別表的六個公告類別
+-- 六個公告類別
 INSERT INTO Categories (Name) VALUES
 ('行政公告'), ('徵才公告'), ('校內徵才'), ('校外來文'), ('實習/就業'), ('活動預告');
 
--- 插入十筆會員資料
+-- 會員資料
 INSERT INTO Members (Account, Username, Password)
 VALUES
 ('user1', 'User One', 'password1'),
 ('user2', 'User Two', 'password2'),
-('user3', 'User Three', 'password3'),
-('user4', 'User Four', 'password4'),
-('user5', 'User Five', 'password5'),
-('user6', 'User Six', 'password6'),
-('user7', 'User Seven', 'password7'),
-('user8', 'User Eight', 'password8'),
-('user9', 'User Nine', 'password9'),
-('user10', 'User Ten', 'password10');
+('user3', 'User Three', 'password3');
 
--- 插入十筆隨機訂閱資料，每位使用者至少訂閱一個公告類別
+-- 隨機訂閱資料，每位使用者至少訂閱一個公告類別
 INSERT INTO SubscriptionCategories (MemberID, CategoryID)
-VALUES (1, 2),(2, 4),(3, 1),(4, 2),(5, 3),(6, 1),(7, 2),(8, 3),(9, 4),(10, 5),
-(1, 6),(2, 1),(3, 2),(4, 3),(5, 4),(6, 5),(7, 6),(8, 1),(9, 2),(10, 3);
+VALUES (1, 2), (1, 4), (1, 5), (2, 1), (2, 2), (3, 2);
 
 SELECT * FROM Members;
 SELECT * FROM Categories;
@@ -55,10 +47,18 @@ SELECT * FROM SubscriptionCategories;
 
 
 DELIMITER //
---  查詢使用者訂閱了哪些類別
+
+-- 根據account查詢使用者ID
+CREATE PROCEDURE GetUserIdFromAccount(IN user_account VARCHAR(255), OUT user_id INT)
+BEGIN
+    SELECT ID INTO user_id FROM Members WHERE Members.Account = user_account;
+    SELECT user_id;
+END //
+
+-- 使用user_id查詢使用者訂閱了哪些類別
 CREATE PROCEDURE GetUserSubscribedCategories(IN user_id INT)
 BEGIN
-    SELECT Categories.Name FROM Categories
+    SELECT Categories.ID FROM Categories
     INNER JOIN SubscriptionCategories ON Categories.ID = SubscriptionCategories.CategoryID
     INNER JOIN Members ON Members.ID = SubscriptionCategories.MemberID
     WHERE Members.ID = user_id;
@@ -66,4 +66,7 @@ END //
 
 DELIMITER ;
 
--- CALL GetUserSubscribedCategories(2);
+SET @user_id = 0; -- 初始化 user_id 變數
+CALL GetUserIdFromAccount('user2', @user_id);
+SELECT @user_id; -- 檢查獲得的 user_id
+CALL GetUserSubscribedCategories(@user_id);
