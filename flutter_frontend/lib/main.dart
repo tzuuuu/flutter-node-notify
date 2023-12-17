@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'layout/index.dart';
+import 'index.dart';
+import 'post-notify.dart'; 
 
-void main() {
-  runApp( MyApp());
+void main() async {
+  runApp(MyApp());
+  await Future.delayed(Duration(seconds: 5));
+  print('send notify');
+  await PostNotify.sendNotification(); // 發送通知
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,8 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const IndexScreen(), 
+      home: IndexScreen(),
     );
   }
-
 }

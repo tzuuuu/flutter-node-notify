@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
-import '../layout/index.dart';
+import '../index.dart';
 import '../getpost.dart';
 import '../register.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;

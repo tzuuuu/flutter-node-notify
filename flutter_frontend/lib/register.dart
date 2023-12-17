@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import '../layout/index.dart';
+import '../index.dart';
 import 'package:http/http.dart' as http;
 
 class RegisterScreen extends StatelessWidget {
@@ -48,7 +48,7 @@ class RegisterScreen extends StatelessWidget {
       );
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const IndexScreen()),
+        MaterialPageRoute(builder: (context) => IndexScreen()),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(

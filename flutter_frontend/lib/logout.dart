@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notification_system/getpost.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../layout/index.dart'; 
+import '../index.dart'; 
 
 class LogoutScreen extends StatelessWidget {
   final VoidCallback logoutCallback;
@@ -28,7 +28,7 @@ class LogoutScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const IndexScreen()),
+                  MaterialPageRoute(builder: (context) => IndexScreen()),
                 );
               },
               child: const Text('返回首頁'),
