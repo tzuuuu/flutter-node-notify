@@ -1,0 +1,15 @@
+# Target labels
+ nuget-populate
+# Source files and their labels
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/nuget-populate
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/05a51293de3feca7ae823c0696e9ee9c/nuget-populate.rule
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/5722673eebfe177495170c98149ba5ae/nuget-populate-complete.rule
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-build.rule
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-configure.rule
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-copyfile.rule
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-download.rule
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-install.rule
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-mkdir.rule
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-patch.rule
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-test.rule
+D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-update.rule

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\4933c4eecffdc7477fcc199d1da4a6df\nuget-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\4933c4eecffdc7477fcc199d1da4a6df\nuget-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\4933c4eecffdc7477fcc199d1da4a6df\nuget-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\4933c4eecffdc7477fcc199d1da4a6df\nuget-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\4933c4eecffdc7477fcc199d1da4a6df\nuget-populate-copyfile.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\4933c4eecffdc7477fcc199d1da4a6df\nuget-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\4933c4eecffdc7477fcc199d1da4a6df\nuget-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\4933c4eecffdc7477fcc199d1da4a6df\nuget-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\4933c4eecffdc7477fcc199d1da4a6df\nuget-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\5722673eebfe177495170c98149ba5ae\nuget-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\05a51293de3feca7ae823c0696e9ee9c\nuget-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\_deps\nuget-subbuild\CMakeFiles\nuget-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C110AB67-0EE8-3D43-A6B9-97DF764E0477}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

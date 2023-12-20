@@ -52,14 +52,15 @@ class PostFetcher {
   }
 
   static void createContentlog(Map<String, dynamic> responseData) {
-  final contentList = responseData['content'] as List;
+    clearContentLog();
+    final contentList = responseData['content'] as List;
 
     for (var item in contentList) {
       contentlog.add({
         'title': item['TITLE'],
         'SN': item['SN'], // 存取 'SN' 資料
       });
-      
+      print(contentlog);
     }
   }
 

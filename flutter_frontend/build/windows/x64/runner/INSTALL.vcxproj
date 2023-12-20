@@ -101,6 +101,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="D:\github-repo\notification_system\flutter_frontend\build\windows\x64\CMakeFiles\5875e380426d0b2669075d0b2abf6450\INSTALL_force.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 cd .
@@ -115,6 +116,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github-repo\notification_system\flutter_frontend\build\windows\x64\runner\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
 cd .
@@ -129,6 +131,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">D:\github-repo\notification_system\flutter_frontend\build\windows\x64\runner\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</VerifyInputsAndOutputsExist>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 cd .

@@ -44,6 +44,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/permission_handler_windows/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/url_launcher_windows/cmake_install.cmake")
 endif()
 
@@ -152,34 +157,43 @@ endif()
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/url_launcher_windows_plugin.dll")
+     "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/permission_handler_windows_plugin.dll;D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug/url_launcher_windows_plugin.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-    file(INSTALL DESTINATION "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug" TYPE FILE FILES "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.dll")
+    file(INSTALL DESTINATION "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Debug" TYPE FILE FILES
+      "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/permission_handler_windows/Debug/permission_handler_windows_plugin.dll"
+      "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.dll"
+      )
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Pp][Rr][Oo][Ff][Ii][Ll][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Profile/url_launcher_windows_plugin.dll")
+     "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Profile/permission_handler_windows_plugin.dll;D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Profile/url_launcher_windows_plugin.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-    file(INSTALL DESTINATION "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Profile" TYPE FILE FILES "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/url_launcher_windows/Profile/url_launcher_windows_plugin.dll")
+    file(INSTALL DESTINATION "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Profile" TYPE FILE FILES
+      "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/permission_handler_windows/Profile/permission_handler_windows_plugin.dll"
+      "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/url_launcher_windows/Profile/url_launcher_windows_plugin.dll"
+      )
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Release/url_launcher_windows_plugin.dll")
+     "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Release/permission_handler_windows_plugin.dll;D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Release/url_launcher_windows_plugin.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-    file(INSTALL DESTINATION "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Release" TYPE FILE FILES "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/url_launcher_windows/Release/url_launcher_windows_plugin.dll")
+    file(INSTALL DESTINATION "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/runner/Release" TYPE FILE FILES
+      "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/permission_handler_windows/Release/permission_handler_windows_plugin.dll"
+      "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/plugins/url_launcher_windows/Release/url_launcher_windows_plugin.dll"
+      )
   endif()
 endif()
 

@@ -1,0 +1,49 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/nuget-populate"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/05a51293de3feca7ae823c0696e9ee9c/nuget-populate.rule"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/5722673eebfe177495170c98149ba5ae/nuget-populate-complete.rule"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-build.rule"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-configure.rule"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-copyfile.rule"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-download.rule"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-install.rule"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-patch.rule"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-test.rule"
+		},
+		{
+			"file" : "D:/github-repo/notification_system/flutter_frontend/build/windows/x64/_deps/nuget-subbuild/CMakeFiles/4933c4eecffdc7477fcc199d1da4a6df/nuget-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"nuget-populate"
+		],
+		"name" : "nuget-populate"
+	}
+}

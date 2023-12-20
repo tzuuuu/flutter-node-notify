@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -65,69 +66,69 @@ class _NotificationPageState extends State<NotificationPage> {
   }
 
 
-@override
-Widget build(BuildContext context) {
-  double adjustedHeight = MediaQuery.of(context).size.height;
+  @override
+  Widget build(BuildContext context) {
+    double adjustedHeight = MediaQuery.of(context).size.height;
 
-  if (Platform.isAndroid) {
-    adjustedHeight -= 375; // Android 高度
-  } else if (Platform.isWindows || kIsWeb) {
-    adjustedHeight -= 250; // Windows Web 高度
-  }
-
-  return Container(
-    padding: const EdgeInsets.all(16.0),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        const SizedBox(height: 16.0),
-        Wrap(
-          alignment: WrapAlignment.spaceEvenly,
-          spacing: 16,
-          runSpacing: 16,
-          children: List.generate(
-            titles.length,
-            (index) => ElevatedButton(
-              onPressed: () {
-                // botton on click
-                handleButtonPress(index);
-              },
-              child: Text(titles[index]),
+    if( kIsWeb || Platform.isWindows) {
+      adjustedHeight -= 250;
+    } else {
+      adjustedHeight -= 375;
+    }
+    
+    return Container(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          const SizedBox(height: 16.0),
+          Wrap(
+            alignment: WrapAlignment.spaceEvenly,
+            spacing: 16,
+            runSpacing: 16,
+            children: List.generate(
+              titles.length,
+              (index) => ElevatedButton(
+                onPressed: () {
+                  // botton on click
+                  handleButtonPress(index);
+                },
+                child: Text(titles[index]),
+              ),
             ),
           ),
-        ),
-        const SizedBox(height: 10),
-        const Text('公告清單', textAlign: TextAlign.center),
-        const SizedBox(height: 10),
-        // listview
-        Container(
-          height: adjustedHeight,
-          child: ListView.builder(
-            physics: const AlwaysScrollableScrollPhysics(),
-            shrinkWrap: true, // 讓 ListView 根據內容大小動態收縮
-            itemCount: linkList.length,
-            itemBuilder: (context, index) {
-              return ListTile(
-                title: Text(linkList[index]),
-                onTap: () {
-                  if (contentlog.isNotEmpty) {
-                    _launchURL(contentlog[index]['SN']);
-                  } else {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('無效的連結，請先選擇公告類別'),
-                      ),
-                    );
-                  }
-                },
-              );
-            },
+          const SizedBox(height: 10),
+          const Text('公告清單', textAlign: TextAlign.center),
+          const SizedBox(height: 10),
+          // listview
+          Container(
+            height: adjustedHeight,
+            child: ListView.builder(
+              physics: const AlwaysScrollableScrollPhysics(),
+              shrinkWrap: true, // 讓 ListView 根據內容大小動態收縮
+              itemCount: linkList.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(linkList[index]),
+                  onTap: () {
+                    if (contentlog.isNotEmpty) {
+                      _launchURL(contentlog[index]['SN']);
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('無效的連結，請先選擇公告類別'),
+                        ),
+                      );
+                    }
+                  },
+                );
+              },
+            ),
           ),
-        ),
-      ],
-    ),
-  );
-}
+        ],
+      ),
+    );
+  }
 
 
   void handleButtonPress(int index) async {

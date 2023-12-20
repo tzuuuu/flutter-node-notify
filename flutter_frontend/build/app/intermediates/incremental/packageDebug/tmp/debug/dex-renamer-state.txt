@@ -1,4 +1,4 @@
-#Sun Dec 17 19:18:05 GMT+08:00 2023
+#Wed Dec 20 15:01:07 GMT+08:00 2023
 base.0=D\:\\github-repo\\notification_system\\flutter_frontend\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 base.1=D\:\\github-repo\\notification_system\\flutter_frontend\\build\\app\\intermediates\\desugar_lib_dex\\debug\\classes1000.dex
 base.2=D\:\\github-repo\\notification_system\\flutter_frontend\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex

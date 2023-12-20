@@ -69,6 +69,7 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral;D:\github-repo\notification_system\flutter_frontend\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
